@@ -1,0 +1,31 @@
+import Navbar from './component/navbar'
+import { TopographyBackground } from "./components/ui/topography"
+import About from './sections/about'
+import Projects from './sections/project'
+import Certificate from './sections/certificate'
+import Contact from './sections/contact'
+
+function App() {
+  return (
+    <div className="min-h-screen bg-gray-900">
+      <TopographyBackground>
+        <Navbar />
+        
+        {/* All Sections */}
+        <About />
+        <Projects />
+        <Certificate />
+        <Contact />
+
+        {/* Footer */}
+        <footer className="bg-gray-900 border-t border-green-400/30 py-8 px-4">
+          <div className="max-w-6xl mx-auto text-center text-gray-400">
+            <p>© {new Date().getFullYear()} Rafli Triofansyah. All rights reserved.</p>
+          </div>
+        </footer>
+      </TopographyBackground>
+    </div>
+  )
+}
+
+export default App
