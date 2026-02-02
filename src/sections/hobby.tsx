@@ -29,7 +29,7 @@ const hobbies: Hobby[] = [
   {
     id: 3,
     name: "Watching Anime",
-    description: "Technical books, sci-fi novels, and tech blogs. Constantly learning about software architecture, design patterns, and industry trends.",
+    description: "Watching anime as a way to unwind while enjoying meaningful stories.",
     icon: BookOpen,
     gradient: "from-blue-500 to-cyan-600",
     url: "https://shrinkme.click/RatroAnime"
