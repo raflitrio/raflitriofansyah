@@ -100,14 +100,14 @@ export default function Project() {
   return (
     <section
       id="project"
-      className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-12 xl:px-16 py-16 sm:py-20"
+      className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20"
     >
       <div className="w-full max-w-7xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 mb-12 md:mb-16 text-center font-silkscreen break-words">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 mb-8 sm:mb-12 md:mb-16 text-center font-silkscreen">
           Projects
         </h2>
 
-        <div className="space-y-16 md:space-y-24">
+        <div className="space-y-12 sm:space-y-16 md:space-y-20 lg:space-y-24">
           {projects.map((project, index) => {
             const isEven = index % 2 === 1
             
@@ -115,41 +115,42 @@ export default function Project() {
               <div
                 key={project.id}
                 className={`group flex flex-col ${
-                  isEven ? 'md:flex-row-reverse' : 'md:flex-row'
-                } gap-6 md:gap-8 lg:gap-12 items-center`}
+                  isEven ? 'lg:flex-row-reverse' : 'lg:flex-row'
+                } gap-6 sm:gap-8 lg:gap-10 xl:gap-12`}
               >
                 {/* Project Image */}
-                <div className="w-full md:w-1/2">
-                  <div className="relative rounded-2xl overflow-hidden border border-green-400/20 group-hover:border-green-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-green-400/20">
-                    <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-blue-500/20 mix-blend-overlay z-10"></div>
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-64 sm:h-80 md:h-96 object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    {/* Hover Glow Effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-green-400/0 via-green-400/10 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="w-full lg:w-1/2 flex-shrink-0">
+                  <div className="relative rounded-xl sm:rounded-2xl overflow-hidden border border-green-400/20 hover:border-green-400/40 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-green-400/20">
+                    <div className="relative w-full aspect-video sm:aspect-[4/3]">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      {/* Simple overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-green-400/10 to-blue-500/10 opacity-50"></div>
+                    </div>
                   </div>
                 </div>
 
                 {/* Project Content */}
-                <div className="w-full md:w-1/2 space-y-4 md:space-y-6">
+                <div className="w-full lg:w-1/2 flex flex-col justify-center space-y-3 sm:space-y-4 md:space-y-5">
                   {/* Title */}
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 font-poppins break-words">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 font-poppins">
                     {project.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
+                  <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
                     {project.description}
                   </p>
 
                   {/* Technologies */}
-                  <div className="flex flex-wrap gap-2 md:gap-3">
+                  <div className="flex flex-wrap gap-2 pt-1">
                     {project.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className={`px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base bg-gray-800/50 backdrop-blur-sm border-b-3 ${tech.borderColor} text-gray-200 rounded-lg font-semibold hover:bg-gray-800/70 transition-all duration-200`}
+                        className={`inline-block px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm md:text-base bg-gray-800/60 border-b-[3px] ${tech.borderColor} text-gray-200 rounded-lg font-semibold hover:bg-gray-800/80 transition-colors duration-200`}
                       >
                         {tech.name}
                       </span>
@@ -157,15 +158,15 @@ export default function Project() {
                   </div>
 
                   {/* Links */}
-                  <div className="flex gap-3 md:gap-4 pt-2">
+                  <div className="flex flex-wrap gap-3 pt-2">
                     {project.githubUrl && (
                       <a
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-all duration-200 text-sm sm:text-base font-poppins hover:shadow-lg hover:shadow-gray-700/50"
+                        className="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-all duration-200 text-sm sm:text-base font-poppins shadow-md hover:shadow-lg"
                       >
-                        <Github style={{ width: '20px', height: '20px' }} />
+                        <Github className="w-4 h-4 sm:w-5 sm:h-5" />
                         <span>Code</span>
                       </a>
                     )}
@@ -174,9 +175,9 @@ export default function Project() {
                         href={project.demoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white rounded-lg transition-all duration-200 text-sm sm:text-base font-poppins hover:shadow-lg hover:shadow-green-500/50"
+                        className="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white rounded-lg transition-all duration-200 text-sm sm:text-base font-poppins shadow-md hover:shadow-lg"
                       >
-                        <ExternalLink style={{ width: '20px', height: '20px' }} />
+                        <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5" />
                         <span>Demo</span>
                       </a>
                     )}
