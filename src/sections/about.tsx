@@ -37,7 +37,7 @@ export default function About() {
 
             {/* Download Resume Button */}
             <a
-              href='https://mega.nz/file/pU1DXTIb#D8ig95Z2Srhh__aiVfo4vBSXvSiWYXCByin8tOFctN0'
+              href='https://mega.nz/file/QZFSFTKS#FNqI3MvMqqIdAaRE5Q4atRls9Nvw9gDTbh5ZZogDzlk'
               download
               className="inline-flex items-center gap-2 px-4 py-2 bg-white text-gray-900 rounded-lg text-sm font-semibold hover:bg-gray-100 transition-all duration-300 shadow-md hover:shadow-lg"
             >
