@@ -108,6 +108,7 @@ const projects: Project[] = [
     { name: "Google Sheets", borderColor: "border-emerald-400" }
   ],
     demoUrl: "e-ulangansmk2mh.vercel.app",
+  },
 ]
 
 export default function Project() {
