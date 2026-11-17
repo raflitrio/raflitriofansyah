@@ -5,6 +5,7 @@ import Pam from '../assets/panda.png'
 import Run from '../assets/event.png'
 import Inv from '../assets/inventory.png'
 import Skincam from '../assets/skincam.png'
+import smk2mh from '../assets/smk2mh.jpg'
 import { Github, ExternalLink } from 'lucide-react'
 
 interface Project {
@@ -94,6 +95,19 @@ const projects: Project[] = [
     githubUrl: "https://github.com",
     demoUrl: "https://mega.nz/file/8UdClJJD#UA-aktCksyATHBkYtpdTyK6m9z3ZndVI_PgNohjHjXo",
   },
+  {
+    id: 7,
+    title: "Student Tests and Teacher Portal",
+    description: "A digital examination platform designed to simplify school assessments with zero development cost. Features include responsive student interfaces, automated grading, scheduled exams, five question types, and real-time result management. Integrated with Google Sheets and Apps Script, the platform enables teachers to manage exams, questions, schedules, and student records efficiently without coding.",
+    image: smk2mh,
+    technologies: [
+    { name: "HTML", borderColor: "border-orange-400" },
+    { name: "CSS", borderColor: "border-blue-400" },
+    { name: "JavaScript", borderColor: "border-yellow-400" },
+    { name: "Google Apps Script", borderColor: "border-green-400" },
+    { name: "Google Sheets", borderColor: "border-emerald-400" }
+  ],
+    demoUrl: "e-ulangansmk2mh.vercel.app",
 ]
 
 export default function Project() {
