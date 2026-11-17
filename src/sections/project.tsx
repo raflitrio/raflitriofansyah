@@ -97,7 +97,7 @@ const projects: Project[] = [
   },
   {
     id: 7,
-    title: "Student Tests and Teacher Portal",
+    title: "Student Exams & Teacher Portal",
     description: "A digital examination platform designed to simplify school assessments with zero development cost. Features include responsive student interfaces, automated grading, scheduled exams, five question types, and real-time result management. Integrated with Google Sheets and Apps Script, the platform enables teachers to manage exams, questions, schedules, and student records efficiently without coding.",
     image: smk2mh,
     technologies: [
@@ -107,7 +107,7 @@ const projects: Project[] = [
     { name: "Google Apps Script", borderColor: "border-green-400" },
     { name: "Google Sheets", borderColor: "border-emerald-400" }
   ],
-    demoUrl: "e-ulangansmk2mh.vercel.app",
+    demoUrl: "https://e-ulangansmk2mh.vercel.app",
   },
 ]
 
