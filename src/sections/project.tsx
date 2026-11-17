@@ -5,7 +5,7 @@ import Pam from '../assets/panda.png'
 import Run from '../assets/event.png'
 import Inv from '../assets/inventory.png'
 import Skincam from '../assets/skincam.png'
-import smk2mh from '../assets/smk2mh.jpg'
+import smk2mh from '../assets/smk2mh.png'
 import { Github, ExternalLink } from 'lucide-react'
 
 interface Project {
