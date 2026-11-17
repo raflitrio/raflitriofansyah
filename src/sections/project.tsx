@@ -107,7 +107,7 @@ const projects: Project[] = [
     { name: "Google Apps Script", borderColor: "border-green-400" },
     { name: "Google Sheets", borderColor: "border-emerald-400" }
   ],
-    demoUrl: "https://e-ulangansmk2mh.vercel.app",
+    demoUrl: "https://e-ulangansmkn2mh.vercel.app",
   },
 ]
 
